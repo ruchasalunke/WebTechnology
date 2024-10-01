@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Ensure this line points to styles.css in the same directory -->
+    <title>College Admin Dashboard</title>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h2>KCCOP</h2>
+        <nav class="nav flex-column">
+            <a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a class="nav-link" href="#"><i class="fas fa-user-graduate"></i> Student</a>
+            <a class="nav-link" href="#"><i class="fas fa-chalkboard-teacher"></i> Teacher</a>
+            <a class="nav-link" href="#"><i class="fas fa-book"></i> Assignment</a>
+            <a class="nav-link" href="#"><i class="fas fa-clipboard-list"></i> Examination</a>
+            <a class="nav-link" href="#"><i class="fas fa-sticky-note"></i> Notes</a>
+            <a class="nav-link" href="#"><i class="fas fa-tasks"></i> Activities</a>
+        </nav>
+    </div>
+
+    <!-- Toggle Button -->
+    <button id="toggle-btn" class="toggle-btn">☰</button>
+
+    <!-- Main Content -->
+    <div class="content" id="content">
+        <h1 class="mb-4 text-center">K C COLLEGE OF PHARMACY, Karnataka</h1>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <h5>3256</h5>
+                    <p>Students</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <h5>18</h5>
+                    <p>Assignments</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <h5>221</h5>
+                    <p>Teachers</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card">
+                    <h5>18/11/2023</h5>
+                    <p>Exam Date</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Activities</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Activity Name</th>
+                                    <th>Class</th>
+                                    <th>Total Students</th>
+                                    <th>Winner</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Group Discussion</td>
+                                    <td>TE</td>
+                                    <td>77</td>
+                                    <td>Rucha</td>
+                                </tr>
+                                <tr>
+                                    <td>Painting</td>
+                                    <td>SE</td>
+                                    <td>62</td>
+                                    <td>Aarya</td>
+                                </tr>
+                                <tr>
+                                    <td>Rangoli</td>
+                                    <td>BE</td>
+                                    <td>79</td>
+                                    <td>Aniket</td>
+                                </tr>
+                                <tr>
+                                    <td>Aptitude</td>
+                                    <td>SE</td>
+                                    <td>67</td>
+                                    <td>Pushkar</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">New Student</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Profile</th>
+                                    <th>Name</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="https://via.placeholder.com/30" alt="Profile Image" class="profile-img"></td>
+                                    <td>Manasi</td>
+                                    <td><button class="btn btn-success btn-sm">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://via.placeholder.com/30" alt="Profile Image" class="profile-img"></td>
+                                    <td>Abhijeet</td>
+                                    <td><button class="btn btn-success btn-sm">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="https://via.placeholder.com/30" alt="Profile Image" class="profile-img"></td>
+                                    <td>Abhishek</td>
+                                    <td><button class="btn btn-success btn-sm">View</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('toggle-btn').addEventListener('click', function () {
+            var sidebar = document.getElementById('sidebar');
+            var content = document.getElementById('content');
+            var toggleBtn = document.getElementById('toggle-btn');
+            
+            sidebar.classList.toggle('sidebar-collapsed');
+            content.classList.toggle('collapsed');
+            toggleBtn.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+</html>
